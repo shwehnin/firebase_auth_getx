@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "519820572876",
+    "project_id": "fir-getx-app-18cd9",
+    "storage_bucket": "fir-getx-app-18cd9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:519820572876:android:38b1bc4c0f0dddd5b52a69",
+        "android_client_info": {
+          "package_name": "com.hninhninwai.xyz.test_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeLkKJGOM95p3qrr5icur94-sPUwcNH54"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
