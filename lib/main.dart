@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:test_app/helpers/routes.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:test_app/splash/splash_page.dart';
 import 'package:test_app/helpers/init_dependency.dart';
@@ -37,7 +38,8 @@ class _MyAppState extends State<MyApp> {
           colorScheme: defaultColorSchemeTheme,
           useMaterial3: true,
           appBarTheme: const AppBarTheme(color: Colors.indigo)),
-      home: const SignupPage(),
+      initialRoute: RoutesClass.getHomeRoute(),
+      getPages: RoutesClass.routes,
     );
   }
 }

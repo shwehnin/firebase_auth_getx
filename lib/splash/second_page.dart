@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-import 'package:test_app/splash/third_page.dart';
+import 'package:test_app/helpers/routes.dart';
 
 class SecondPage extends StatelessWidget {
   const SecondPage({super.key});
@@ -15,7 +15,7 @@ class SecondPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             GestureDetector(
-              onTap: () => Get.to(() => ThirdPage()),
+              onTap: () => Get.toNamed(RoutesClass.getThirdRoute()),
               child: Container(
                 alignment: Alignment.center,
                 margin: const EdgeInsets.all(20),

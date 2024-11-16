@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-import 'package:test_app/auth/signin/signin_page.dart';
+import 'package:test_app/helpers/routes.dart';
 import 'package:test_app/auth/controllers/auth_controller.dart';
 
 class SignupPage extends StatelessWidget {
@@ -189,9 +189,7 @@ class SignupPage extends StatelessWidget {
                     height: 10,
                   ),
                   GestureDetector(
-                    onTap: () => Get.to(
-                      () => const SigninPage(),
-                    ),
+                    onTap: () => Get.toNamed(RoutesClass.getSignInRoute()),
                     child: const Text(
                       "Have an account?",
                       style: TextStyle(color: Colors.grey, fontSize: 18),

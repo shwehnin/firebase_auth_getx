@@ -1,7 +1,6 @@
 import 'package:get/get.dart';
+import '../helpers/routes.dart';
 import 'package:flutter/material.dart';
-import 'package:test_app/splash/first_page.dart';
-import 'package:test_app/splash/second_page.dart';
 import 'package:test_app/splash/controllers/tab_controller.dart';
 
 class SplashPage extends StatelessWidget {
@@ -11,7 +10,7 @@ class SplashPage extends StatelessWidget {
   Widget build(BuildContext context) {
     TabCountController tabController = Get.find();
     return Scaffold(
-      body: Container(
+      body: SizedBox(
         width: double.maxFinite,
         height: double.maxFinite,
         child: Column(
@@ -56,7 +55,7 @@ class SplashPage extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                Get.to(() => const FirstPage());
+                Get.toNamed(RoutesClass.getFirstRoute());
               },
               child: Container(
                 alignment: Alignment.center,
@@ -76,7 +75,7 @@ class SplashPage extends StatelessWidget {
               ),
             ),
             GestureDetector(
-              onTap: () => Get.to(() => const SecondPage()),
+              onTap: () => Get.toNamed(RoutesClass.getSecondRoute()),
               child: Container(
                 alignment: Alignment.center,
                 margin: const EdgeInsets.all(20),

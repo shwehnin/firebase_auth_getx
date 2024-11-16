@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:test_app/auth/signup/signup_page.dart';
+import 'package:test_app/helpers/routes.dart';
 import 'package:test_app/auth/controllers/auth_controller.dart';
 
 class SigninPage extends StatelessWidget {
@@ -193,7 +193,8 @@ class SigninPage extends StatelessWidget {
                         children: [
                           TextSpan(
                             recognizer: TapGestureRecognizer()
-                              ..onTap = () => Get.to(() => const SignupPage()),
+                              ..onTap = () =>
+                                  Get.toNamed(RoutesClass.getSignUpRoute()),
                             text: "Create",
                             style: const TextStyle(
                                 color: Colors.black, fontSize: 18),

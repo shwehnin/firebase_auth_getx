@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
+import '../helpers/routes.dart';
 import 'package:flutter/material.dart';
 import 'controllers/tab_controller.dart';
-import 'package:test_app/splash/splash_page.dart';
 import 'package:test_app/splash/controllers/list_controller.dart';
 
 class ThirdPage extends StatelessWidget {
@@ -19,7 +19,7 @@ class ThirdPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             GestureDetector(
-              onTap: () => Get.to(() => const SplashPage()),
+              onTap: () => Get.toNamed(RoutesClass.getSplashRoute()),
               child: Container(
                 alignment: Alignment.center,
                 margin: const EdgeInsets.all(20),
