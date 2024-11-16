@@ -1,5 +1,7 @@
+import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:test_app/splash/splash_page.dart';
 import 'package:test_app/auth/controllers/auth_controller.dart';
 
 class WelcomePage extends StatelessWidget {
@@ -58,6 +60,32 @@ class WelcomePage extends StatelessWidget {
                 Text(
                   "${user.email}",
                   style: const TextStyle(fontSize: 20, color: Colors.grey),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                GestureDetector(
+                  onTap: () => Get.to(() => const SplashPage()),
+                  child: Container(
+                    alignment: Alignment.center,
+                    margin: const EdgeInsets.all(20),
+                    width: double.maxFinite,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      image: const DecorationImage(
+                        fit: BoxFit.fill,
+                        image: AssetImage("assets/images/loginbtn.png"),
+                      ),
+                    ),
+                    child: const Text(
+                      "Go to next",
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
                 ),
               ],
             ),
