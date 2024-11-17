@@ -5,6 +5,7 @@ import 'package:test_app/splash/first_page.dart';
 import 'package:test_app/splash/third_page.dart';
 import 'package:test_app/splash/second_page.dart';
 import 'package:test_app/splash/splash_page.dart';
+import 'package:test_app/auth/user/profile_page.dart';
 import 'package:test_app/auth/signup/signup_page.dart';
 import 'package:test_app/auth/signin/signin_page.dart';
 
@@ -17,6 +18,7 @@ class RoutesClass {
   static String third = "/third";
   static String second = "/second";
   static String first = "/first";
+  static String profile = "/profile";
 
   static String getHomeRoute() => home;
   static String getSplashRoute() => splash;
@@ -26,6 +28,7 @@ class RoutesClass {
   static String getThirdRoute() => third;
   static String getSecondRoute() => second;
   static String getFirstRoute() => first;
+  static String getProfileRoute() => profile;
 
   static List<GetPage> routes = [
     GetPage(
@@ -73,6 +76,12 @@ class RoutesClass {
     GetPage(
       name: first,
       page: () => const FirstPage(),
+      transition: Transition.fade,
+      transitionDuration: const Duration(seconds: 1),
+    ),
+    GetPage(
+      name: profile,
+      page: () => const ProfilePage(),
       transition: Transition.fade,
       transitionDuration: const Duration(seconds: 1),
     ),

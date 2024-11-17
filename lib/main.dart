@@ -2,11 +2,8 @@ import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:test_app/helpers/routes.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:test_app/splash/splash_page.dart';
 import 'package:test_app/helpers/init_dependency.dart';
-import 'package:test_app/auth/signup/signup_page.dart';
 import 'package:test_app/helpers/init_controllers.dart' as di;
-import 'package:test_app/auth/controllers/auth_controller.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -38,7 +35,7 @@ class _MyAppState extends State<MyApp> {
           colorScheme: defaultColorSchemeTheme,
           useMaterial3: true,
           appBarTheme: const AppBarTheme(color: Colors.indigo)),
-      initialRoute: RoutesClass.getHomeRoute(),
+      initialRoute: RoutesClass.getProfileRoute(),
       getPages: RoutesClass.routes,
     );
   }

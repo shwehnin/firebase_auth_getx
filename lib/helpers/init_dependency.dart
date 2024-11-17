@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import '../auth/controllers/auth_controller.dart';
 import '../splash/controllers/tab_controller.dart';
 import '../splash/controllers/list_controller.dart';
+import 'package:test_app/auth/controllers/user_controller.dart';
 
 class InitDependency implements Bindings {
   @override
@@ -9,5 +10,6 @@ class InitDependency implements Bindings {
     Get.lazyPut(() => TabCountController());
     Get.lazyPut(() => ListController());
     Get.lazyPut(() => AuthController());
+    Get.lazyPut(() => UserController());
   }
 }
