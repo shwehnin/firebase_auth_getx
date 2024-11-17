@@ -35,7 +35,7 @@ class _MyAppState extends State<MyApp> {
           colorScheme: defaultColorSchemeTheme,
           useMaterial3: true,
           appBarTheme: const AppBarTheme(color: Colors.indigo)),
-      initialRoute: RoutesClass.getProfileRoute(),
+      initialRoute: RoutesClass.getTimerRoute(),
       getPages: RoutesClass.routes,
     );
   }

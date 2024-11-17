@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:test_app/home/home_page.dart';
 import 'package:test_app/item/item_page.dart';
+import 'package:test_app/timer/timer_page.dart';
 import 'package:test_app/splash/first_page.dart';
 import 'package:test_app/splash/third_page.dart';
 import 'package:test_app/splash/second_page.dart';
@@ -19,6 +20,7 @@ class RoutesClass {
   static String second = "/second";
   static String first = "/first";
   static String profile = "/profile";
+  static String timer = "/timer";
 
   static String getHomeRoute() => home;
   static String getSplashRoute() => splash;
@@ -29,6 +31,7 @@ class RoutesClass {
   static String getSecondRoute() => second;
   static String getFirstRoute() => first;
   static String getProfileRoute() => profile;
+  static String getTimerRoute() => timer;
 
   static List<GetPage> routes = [
     GetPage(
@@ -82,6 +85,12 @@ class RoutesClass {
     GetPage(
       name: profile,
       page: () => const ProfilePage(),
+      transition: Transition.fade,
+      transitionDuration: const Duration(seconds: 1),
+    ),
+    GetPage(
+      name: timer,
+      page: () => const TimerPage(),
       transition: Transition.fade,
       transitionDuration: const Duration(seconds: 1),
     ),
