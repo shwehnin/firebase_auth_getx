@@ -6,10 +6,12 @@ import 'package:test_app/splash/first_page.dart';
 import 'package:test_app/splash/third_page.dart';
 import 'package:test_app/splash/second_page.dart';
 import 'package:test_app/splash/splash_page.dart';
+import 'package:test_app/auth/user/user_page.dart';
 import 'package:test_app/splash/language_page.dart';
 import 'package:test_app/auth/user/profile_page.dart';
 import 'package:test_app/auth/signup/signup_page.dart';
 import 'package:test_app/auth/signin/signin_page.dart';
+import 'package:test_app/auth/user/user_info_page.dart';
 
 class RoutesClass {
   static String home = "/home";
@@ -23,6 +25,8 @@ class RoutesClass {
   static String profile = "/profile";
   static String timer = "/timer";
   static String language = "/language";
+  static String userInfo = "/user_info";
+  static String user = "/user";
 
   static String getHomeRoute() => home;
   static String getSplashRoute() => splash;
@@ -35,6 +39,8 @@ class RoutesClass {
   static String getProfileRoute() => profile;
   static String getTimerRoute() => timer;
   static String getLanguageRoute() => language;
+  static String getUserInfoRoute() => userInfo;
+  static String getUserRoute() => user;
 
   static List<GetPage> routes = [
     GetPage(
@@ -100,6 +106,18 @@ class RoutesClass {
     GetPage(
       name: language,
       page: () => const LanguagePage(),
+      transition: Transition.fade,
+      transitionDuration: const Duration(seconds: 1),
+    ),
+    GetPage(
+      name: userInfo,
+      page: () => const UserInfoPage(),
+      transition: Transition.fade,
+      transitionDuration: const Duration(seconds: 1),
+    ),
+    GetPage(
+      name: user,
+      page: () => const UserPage(),
       transition: Transition.fade,
       transitionDuration: const Duration(seconds: 1),
     ),

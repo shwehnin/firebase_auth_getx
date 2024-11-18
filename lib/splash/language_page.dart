@@ -34,15 +34,15 @@ class LanguagePage extends StatelessWidget {
                                 width: 120,
                               ),
                             ),
-                            const SizedBox(
-                              height: 5,
-                            ),
-                            Center(
-                              child: Image.asset(
-                                "assets/images/profile.png",
-                                width: 120,
-                              ),
-                            ),
+                            // const SizedBox(
+                            //   height: 5,
+                            // ),
+                            // Center(
+                            //   child: Image.asset(
+                            //     "assets/images/profile.png",
+                            //     width: 120,
+                            //   ),
+                            // ),
                             const SizedBox(
                               height: 30,
                             ),
@@ -80,7 +80,7 @@ class LanguagePage extends StatelessWidget {
                             ElevatedButton(
                               onPressed: () =>
                                   Get.toNamed(RoutesClass.getSplashRoute()),
-                              child: Text("Splash"),
+                              child: const Text("Next"),
                             )
                           ],
                         ),
