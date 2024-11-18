@@ -44,8 +44,8 @@ class SplashPage extends StatelessWidget {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     color: Colors.teal),
-                child: const Text(
-                  "Item One",
+                child: Text(
+                  "item_one".tr,
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.w600,
@@ -65,8 +65,8 @@ class SplashPage extends StatelessWidget {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     color: Colors.teal),
-                child: const Text(
-                  "Go to first page",
+                child: Text(
+                  "go_to_first_page".tr,
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.w600,

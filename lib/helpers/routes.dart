@@ -6,6 +6,7 @@ import 'package:test_app/splash/first_page.dart';
 import 'package:test_app/splash/third_page.dart';
 import 'package:test_app/splash/second_page.dart';
 import 'package:test_app/splash/splash_page.dart';
+import 'package:test_app/splash/language_page.dart';
 import 'package:test_app/auth/user/profile_page.dart';
 import 'package:test_app/auth/signup/signup_page.dart';
 import 'package:test_app/auth/signin/signin_page.dart';
@@ -21,6 +22,7 @@ class RoutesClass {
   static String first = "/first";
   static String profile = "/profile";
   static String timer = "/timer";
+  static String language = "/language";
 
   static String getHomeRoute() => home;
   static String getSplashRoute() => splash;
@@ -32,6 +34,7 @@ class RoutesClass {
   static String getFirstRoute() => first;
   static String getProfileRoute() => profile;
   static String getTimerRoute() => timer;
+  static String getLanguageRoute() => language;
 
   static List<GetPage> routes = [
     GetPage(
@@ -41,7 +44,7 @@ class RoutesClass {
       transitionDuration: const Duration(seconds: 1),
     ),
     GetPage(
-      name: home,
+      name: splash,
       page: () => const SplashPage(),
       transition: Transition.fade,
       transitionDuration: const Duration(seconds: 1),
@@ -91,6 +94,12 @@ class RoutesClass {
     GetPage(
       name: timer,
       page: () => const TimerPage(),
+      transition: Transition.fade,
+      transitionDuration: const Duration(seconds: 1),
+    ),
+    GetPage(
+      name: language,
+      page: () => const LanguagePage(),
       transition: Transition.fade,
       transitionDuration: const Duration(seconds: 1),
     ),

@@ -4,6 +4,7 @@ import '../splash/controllers/tab_controller.dart';
 import '../splash/controllers/list_controller.dart';
 import 'package:test_app/auth/controllers/user_controller.dart';
 import 'package:test_app/timer/controller/timer_controller.dart';
+import 'package:test_app/splash/controllers/localization_controller.dart';
 
 class InitDependency implements Bindings {
   @override
@@ -13,5 +14,6 @@ class InitDependency implements Bindings {
     Get.lazyPut(() => AuthController());
     Get.lazyPut(() => UserController());
     Get.lazyPut(() => TimerController());
+    Get.lazyPut(() => LocalizationController(sharedPreferences: Get.find()));
   }
 }
